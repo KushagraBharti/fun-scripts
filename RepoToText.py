@@ -46,7 +46,7 @@ class LocalRepoScraper:
     def write_to_file(self, files_data):
         """Create a .txt file with all the gathered data."""
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        output_filename = f"local_repo_content_{timestamp}.txt"
+        output_filename = f"output.txt"
         with open(output_filename, "w", encoding='utf-8') as output_file:
             output_file.write(f"*Local Directory: \"{self.directory_path}\"*\n")
             for file_data in files_data:
@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     # Default exclusions
     excluded_items = {
-        "file_names": {".env", "package-lock.json", "data_observability.log", "white_car_processed.jpg", ".env.local", ".env.production", ".gitignore", "package.json", "README.md", "yarn.lock", "tsconfig.json", "vercel.json", "eslint.config.js", "toyota_filtered_data.xlsx", "tsconfig.app.json", "eslint.config.js", "vite.config.ts", "tsconfig.node.json"},
+        "file_names": {".env", "package-lock.json", "data_observability.log", "white_car_processed.jpg", ".env.local", ".env.production", ".gitignore", "package.json", "README.md", "yarn.lock", "tsconfig.json", "vercel.json", "toyota_filtered_data.xlsx", "tsconfig.app.json", "eslint.config.js", "vite.config.ts", "tsconfig.node.json"},
         "folder_names": {"dist", "node_modules", ".git", "public", "assets", "data", "models", "__pycache__", "visualizations", ""},
     }
 
